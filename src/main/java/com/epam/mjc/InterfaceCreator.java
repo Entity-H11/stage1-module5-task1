@@ -20,11 +20,6 @@ public class InterfaceCreator {
             }
             return true;
         };
-
-//        return x -> {
-//           return x.stream().filter(val -> !Character.isUpperCase(val.charAt(0))).collect(Collectors.toList()).isEmpty();
-//
-//        };
     }
 
     public Consumer<List<Integer>> addEvenValuesAtTheEnd() {
@@ -49,9 +44,7 @@ public class InterfaceCreator {
     public Function<List<String>, Map<String, Integer>> stringSize() {
         Map<String, Integer> map = new HashMap<>();
         return x -> {
-            x.forEach(val -> {
-                map.put(val, val.length());
-            });
+            x.forEach(val -> map.put(val, val.length()));
             return map;
         };
     }
